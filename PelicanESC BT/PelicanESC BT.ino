@@ -43,7 +43,7 @@ void loop() {
     else if (valueRead == 'w') directionFlag = 0;
     else if (valueRead == 'U') directionServo = 1;
     else if (valueRead == 'u') directionServo = 0;
-    else Stop();
+    else stop();
   }
 }
 
@@ -86,7 +86,7 @@ void backRight() {
   if (directionServo == 0) servo.write(maxAngle[1]);
   else servo.write(maxAngle[0]);
 }
-void Stop() {
+void stop() {
   servo.write(neutralAngle);
   motor.write(neutralPosition);
 }
